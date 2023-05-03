@@ -1,7 +1,11 @@
 body {
     font-family: Georgia, serif;
-    margin: 0;
-    padding: 0;
+    position: absolute;
+    top:10px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
     width: 1000px;
 }
 
@@ -9,20 +13,6 @@ header {
     background-color: #f0f0f0;
     padding: 20px;
     text-align: center;
-}
-
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px;
-    box-sizing: border-box;
-    text-align: left;
-}
-
-@media (max-width: 1000px) {
-    .container {
-        width: 100%;
-    }
 }
 
 .social {
