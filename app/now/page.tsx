@@ -1,0 +1,104 @@
+import Link from 'next/link';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "What I'm doing now: Dale Wiggins",
+};
+
+export default function NowPage() {
+  return (
+    <>
+      <header>
+        <h1><Link href="/">Dale Wiggins</Link></h1>
+        <h1>What I&apos;m doing now</h1>
+        {/* <img src="https://media.discordapp.net/attachments/1091871776830652428/1103388714572452011/fpw3_cartoon_sketch_on_hand_holding_a_ballpoint_pen_to_an_open__d12ccf0a-2e3f-4188-aad9-1231dfd325ec.png?width=697&height=697" alt="Your Image" className="header-image"> */}
+      </header>
+      
+      <section>
+        <h2>Entering the public sphere of the internet</h2>
+        <p>
+          <ul>
+            <li>
+              <strong>Relaunching personal website: </strong> What you see here is the first version I&apos;ve had of my personal website since the early 2000s or so.  Ever since joining the professional world, 
+              I&apos;ve shut this down and have been a private person.  I&apos;m looking to change this, build up an online community, and share my thoughts, ideas, and 
+              help others solve their problems.   I&apos;m looking to build a community of like-minded people who want to help each other out.  
+            </li>
+            <li>
+              <strong>Getting active on social media: </strong> I&apos;ve mostly abandoned Facebook for a few years now.  I am focusing on Twitter, LinkedIn, and Instagram.  I&apos;m looking to build up a following on these platforms, 
+              primarily <a href="https://twitter.com/dalew" target="_blank" rel="noopener noreferrer">Twitter</a>. I&apos;m looking to build up a following of like-minded people
+              who want to help each other out. I want to start engaging in more conversations to expose me to new people and ideas, as well as build an audience for those who would 
+              like to take advantage of my services and apps I plan to launch.
+            </li>
+          </ul>
+        </p>
+
+        <h2>Dev Projects</h2>
+        <p>
+          <ul>
+            <li>
+              <strong>Multiple Personality Bot: </strong> Making a Discord and telegram bot that can impersonate any famous celebrity/figure, past or present
+            </li>
+            <li>
+              <strong>Personal assistant app: </strong> The idea is I want one console-like app that can do everything I need.  Anytime I get an idea, note something 
+              I need to buy, or want to remember something, I want to be able to do it in one place.  I want to be able to ask it questions, and have it either just 
+              record the data in the appropriate place or database, or potentially take action on it.  Some things it&apos;s doing already:
+              <ul>
+                <li>Recording ideas to an ideas database</li>
+                <li>Recording groceries to buy, chores to do, and filing them appropriately</li>
+                <li></li>
+              </ul>
+            </li>
+            <li><strong>Spotify Companion: </strong> App/website that can improve on the base functionality.  Some goals are controls to instantly hate the song playing now, and ensure 
+              it will never be played again, getting a better discovery mode that can both explore certain genres and making sure to only play music you have 
+              not heard before.
+            </li>
+            <li><strong>TLDR Bot: </strong> Another Discord and Telegram bot that can summarize what you&apos;ve missed in a channel since you&apos;ve been gone.  It uses OpenAI API to take the 
+              conversation, break it into smaller pieces (within the token limit), summarize each of those pieces, and then make a full summary of all those 
+              summaries.  It&apos;s a work in progress, but it&apos;s getting better.
+            </li>
+          </ul>
+        </p>
+
+        <h2>AI Art</h2>
+
+        <p>
+          I spent a couple months last summer using <a href="https://www.midjourney.com" target="_blank"
+          rel="noopener noreferrer">Midjourney</a> to create art and images. I had since let my
+          subscription lapse, but I&apos;ve recently signed up
+          again. I&apos;ll be posting daily creations at my <a href="https://www.instagram.com/dalew75/" target="_blank"
+          rel="noopener noreferrer">Instagram</a>. I used a free version
+          called <a href="https://www.bluewillow.ai/" target="_blank"
+              rel="noopener noreferrer">BlueWillow</a>, but that model was
+          not as good as the Midjourney version, so back to paying the $24+ a month.
+        </p>
+
+        <h2>Sports</h2>
+        <ul>
+          <li>
+            <strong>Baseball: </strong> I&apos;m entering my 6th year playing <a href="https://www.lowellotb.org/index.php?league=otb" target="_blank"
+            rel="noopener noreferrer">Over Thirty Baseball (OTB)</a>.  I used to be a good player way back in Little League, 
+            playing 3rd and 1st base, but I decided to quit baseball back after that.  More recently I learned about adult baseball leagues in the area. 
+            In 2018, I joined the <a href="https://www.lowellotb.org/otbTeamInfo.php?teamid=44&season=2023&league=otb" target="_blank"
+            rel="noopener noreferrer">Indians</a>.  The following year I also joined the <a href="https://www.lowellotb.org/index.php?league=notb" target="_blank"
+            rel="noopener noreferrer">Night Over Thirty Baseball</a> league (NOTB), joining the <a href="https://www.lowellotb.org/otbTeamInfo.php?teamid=115&season=2023&league=notb" target="_blank"
+            rel="noopener noreferrer">Mariners</a>.  
+            We lost in the semis that first year, and then went on to win the championship the following 3 years!  
+          </li>
+          <li>
+            <strong>Volleyball: </strong> It was nice finally returning to the indoor coed leagues this winter in the <a href="https://www.facebook.com/groups/142738989510563/" target="_blank"
+            rel="noopener noreferrer">Littleton Volleyball League</a> (LVL) and 
+            the Billerica Volleyball League (BVL).  There was a 3 year hiatus on those leagues due to COVID.  Now my wife and I just opened the sand court at 
+            our house, which we built in 2008, and more recently put lights in in 2019.   
+          </li>
+          <li><strong>Tennis: </strong> Last spring, I played a lot of singles in the <a href="https://www.tennisnortheast.com/" target="_blank"
+            rel="noopener noreferrer">Tennis Northeast League</a> (TNE), but started getting some hip flexor issues.  
+            I didn&apos;t play again until my winter doubles group Sunday mornings at <a href="https://trullbrook.com/" target="_blank"
+            rel="noopener noreferrer">Trull Brook Country Club</a>.  They are threatening to shut down that facility in 
+            favor of using the building for an indoor golf training center, but they haven&apos;t yet started working on it, I think due to the economy.  It looks 
+            like we get to play again next season as of now too.  I will probably join TNE again sometime this summer when and if I get a little more time.
+          </li>
+        </ul>
+      </section>
+    </>
+  );
+}
