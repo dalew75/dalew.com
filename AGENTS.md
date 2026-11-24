@@ -18,3 +18,7 @@ When a change is done, commit it and push `main` to `origin` without asking (use
 - **Rolling back to an older version: ask whether to move `main` back too** (AskUserQuestion, single choice): "Keep main as is, just deploy the old version" / "Reset main to it and park the newer commits on a branch". Suggest a branch name from what the newer commits do, `parked/<kebab-feature>`, and list the commits that would move. If they choose reset: `git branch <name> origin/main` → `git push origin <name>` → `git checkout main && git reset --hard <sha>` (local `main` must be clean and pushed first) → `git push --force-with-lease origin main` → `scripts/deploy-remote.sh latest` (site-deploy resets the server's `main` to `origin/main`). Otherwise `scripts/deploy-remote.sh <sha>`.
 - When the user asks for a list of versions, show a table: `#` (0 = newest), Commit (short sha), Date, Time (local, HH:MM), Author, Change (plain-words summary), and mark the live one with **← live now**. Always look up the live commit on the server first (`status`); if it's older than the rows shown, add it as an extra row below. `history` shows the deploy log.
 - Afterwards run `scripts/deploy-remote.sh status` and tell the user what's live.
+
+## History
+
+`docs/TIMELINE.md`: origin, milestones and one line per finished task (dates only, public repo).
