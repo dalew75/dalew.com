@@ -29,3 +29,4 @@ lines. Public repo: dates only, no clock times.
 - 2026-11-19 · feat · OAuth client metadata for the aiengineerjobs poller; deploy via droplet site-deploy · 7c0ca2b, 44022ee (backfilled)
 - 2026-11-24 · deploy · Zero-downtime side builds (NEXT_DIST_DIR) · 2812ded (backfilled)
 - 2026-11-24 · milestone · Warm-standby slots: /api/health with slot + sha, stage/peek/promote/rollback; cut over to slot b (switch took 4 s) · b145619, droplet 23cc921
+- 2026-11-24 · feat · Security headers (nosniff, referrer policy, no framing), no X-Powered-By; first full slot cycle: stage 77 s, promote/rollback/promote 3–4 s each, 47/47 requests 200 · 8ef79cf
