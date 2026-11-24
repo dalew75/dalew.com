@@ -4,7 +4,9 @@
 #
 #   scripts/deploy-remote.sh stage <target>  build + start <target> in the standby slot (live keeps serving)
 #   scripts/deploy-remote.sh peek            tunnel the standby to http://localhost:23920 to look at it
-#   scripts/deploy-remote.sh promote         make the standby live (seconds); the old version stays warm
+#   scripts/deploy-remote.sh promote [sha]   make the standby live (seconds); the old version stays warm.
+#                                            With a sha: only if that's what's staged (auto-stage may have
+#                                            staged a newer push; the droplet stages new main commits itself)
 #   scripts/deploy-remote.sh rollback        flip back to the warm previous version (seconds)
 #   scripts/deploy-remote.sh slots           what each slot runs, which is live, health
 #   scripts/deploy-remote.sh latest|<target> stage + promote in one go (only promote if already staged)
@@ -23,7 +25,7 @@ PEEK_PORT=23920   # ops/ports.json "dalew-peek"
 arg="${1:-list}"
 
 case "$arg" in
-  -h|--help) sed -n '2,17p' "$0" | sed 's/^# \{0,1\}//'; exit 0 ;;
+  -h|--help) sed -n '2,19p' "$0" | sed 's/^# \{0,1\}//'; exit 0 ;;
   peek)
     slot=$(ssh -o BatchMode=yes "$HOST" "node -pe 'JSON.parse(require(\"fs\").readFileSync(process.env.HOME + \"/apps/.slots/$SITE.json\")).standby'")
     port=3002; [ "$slot" = b ] && port=3005
