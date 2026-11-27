@@ -10,7 +10,7 @@ Personal website: Next.js 14 (app router), React 18, TypeScript. Pages are `app/
 
 ## Resume
 
-`/resume` renders `content/resume.md`, which is only ever talent-agent's approved export (`talent resume export`), never drafts or profile facts: this repo is public. No file = 404 and no link on the home page. It is read at build time and has to be committed to show on a preview or in production.
+`/resume` renders `content/profile.md` (the owner's own resume: summary, skills, experience, education) with `content/resume.md` at its `<!-- projects -->` line. `resume.md` is only ever talent-agent's approved export (`talent resume export`), never drafts or profile facts: this repo is public, so keep phone, address and the source PDF (`docs/*.pdf`, ignored) out. Neither file = 404 and no link on the home page. Both are read at build time and has to be committed to show on a preview or in production.
 
 ## Git
 
