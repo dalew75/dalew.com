@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import EmailLink from '@/components/EmailLink';
+import { readResume } from '@/lib/resume';
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
           | Offering insights and reflections</p>
         <p>
           <Link href="/now">What I&apos;m doing nowawdays</Link>
-        </p>
+          {readResume() && <> | <Link href="/resume">Resume</Link></>}        </p>
       </section>
       <hr />
       <section className="social">

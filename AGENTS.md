@@ -4,6 +4,14 @@ Personal website: Next.js 14 (app router), React 18, TypeScript. Pages are `app/
 
 **Hosting:** the combined droplet (`ssh fairyboo.art`) with **warm-standby slots** (`dalew75/droplet` `lib/slots.sh`, since 2026-11-24): two worktrees of `/home/dale/apps/dalew.com`, `~/apps/slots/dalew-a` (pm2 `dalew-website-a`, 127.0.0.1:3002) and `dalew-b` (`dalew-website-b`, :3005); nginx's upstream `dalew_live` points at the live one. `/api/health` reports `{ok, slot, sha, branch}`; the deploy checks the public one reports the new sha after switching. Server config and the deploy tool live in the `dalew75/droplet` repo (`../droplet`).
 
+## Production approval
+
+**Never push to production** (`promote`, `latest`, `rollback`, a target deploy) without the owner's final approval after they have been able to preview a preview site (owner, 2026-11-27). Changes go on a branch with a preview (`ssh fairyboo.art '~/apps/droplet/bin/site-preview dalew <branch>'`) and reach `main` only after that approval. This overrides the push and deploy rules below.
+
+## Resume
+
+`/resume` renders `content/resume.md`, which is only ever talent-agent's approved export (`talent resume export`), never drafts or profile facts: this repo is public. No file = 404 and no link on the home page.
+
 ## Git
 
 When a change is done, commit it and push `main` to `origin` without asking (user decision). Use Conventional Commit subjects. Never commit secrets or env files.
